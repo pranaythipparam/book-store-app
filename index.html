@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+  <meta charset="utf-8">
+  <title>Dive</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script type="text/javascript">
+    function savenow(no)
+
+{
+ var new_name=document.getElementById("new_name").value;
+ var new_country=document.getElementById("new_country").value;
+ var new_age=document.getElementById("new_age").value;
+  
+ var table=document.getElementById("data_table");
+ var table_len=(table.rows.length)-1;
+ var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='name_row"+table_len+"'>"+new_name+"</td><td id='country_row"+table_len+"'>"+new_country+"</td><td id='age_row"+table_len+"'>"+new_age+"</td><td><input type='button' id='edit_button"+table_len+"' value='Edit' class='edit' onclick='edit_row("+table_len+")'> <input type='button' id='save_button"+table_len+"' value='Save' class='save' onclick='save_row("+table_len+")'> <input type='button' value='Delete' class='delete' onclick='delete_row("+table_len+")'></td></tr>";
+
+ document.getElementById("new_name").value="";
+ document.getElementById("new_country").value="";
+ document.getElementById("new_age").value="";
+}</script>
+</head>
+<body>
+
+  
+  <app-root></app-root>
+</body>
+</html>
